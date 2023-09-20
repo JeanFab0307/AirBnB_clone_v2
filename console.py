@@ -130,6 +130,8 @@ class HBNBCommand(cmd.Cmd):
         while param[0]:
             att_name = param[0].partition("=")[0]
             att_val = param[0].partition("=")[2]
+            if not att_val:
+                return
             if att_val[0] == '"' and att_val[-1] == '"':
                 att_val = att_val[1:-1]
                 att_val = att_val.replace("_", " ")
