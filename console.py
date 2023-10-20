@@ -143,7 +143,6 @@ class HBNBCommand(cmd.Cmd):
                 return
             setattr(new_instance, att_name, att_val)
             param = param[2].partition(" ")
-        storage.save()
         print(new_instance.id)
         storage.save()
 
