@@ -7,6 +7,6 @@ touch /data/web_static/releases/test/index.html
 echo "Hello World" > /data/web_static/releases/test/index.html
 ln -f /data/web_static/current /data/web_static/releases/test/
 sudo chown -R ubuntu:ubuntu /data/
-sudo sed - i '//a\location /hbnb_static{\n\talias /data/web_static/current' /etc/nginx/nginx.conf
-sudo service start nginx
-sudo service restart nginx
+sudo sed - i '/sever_name _;/a\location /hbnb_static{\n\talias /data/web_static/current/n/t}' /etc/nginx/sites-enabled/default
+sudo service nginx start
+sudo service nginx restart
